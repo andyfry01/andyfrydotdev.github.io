@@ -1,1 +1,241 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Andy Fry</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <p class="title__name">Andy Fry</p>
+      <p class="title__tagline">Functional Javascripter | React specialist | World enthusiast</p>
+    </div>
+
+    <div class="navs">
+      <nav aria-labelledby="site-menu" class="menu">
+        <h2 class="menu__title" id="site-menu">Site menu:</h2>
+        <ul class="menu__links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="social-links" class="menu">
+        <h2 class="menu__title" id="social-links">Social links:</h2>
+        <ul class="menu__links">
+          <li><a href="https://github.com/andyfry01" target="_blank">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/andyfry01/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://codesandbox.io/u/andyfry01" target="_blank">CodeSandbox</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr />
+  </header>
+
+  <main>
+    <section id="projects" class="section-card">
+      <h2>Projects</h2>
+
+      <div class="card">
+        <h3>Monadic Russian Roulette</h3>
+        <p>This is a small exploration of the <code>Maybe</code> monad, as implemented in <a href="https://mostly-adequate.gitbooks.io/mostly-adequate-guide/ch08.html">Professor Frisby's Mostly Adequate Guide to Functional Programming</a>. It takes advantage of the monad for conditional React component rendering, preventing a render of an <code>undefined</code> component in a "safe" version of Russian Roulette, and (frequently) crashing in an "unsafe" version of the game. </p>
+        <p>This was my first introduction to the concept of monads and monadic software design, and I was immediately taken with the concept. It felt like waking up after years of stumbling around in the dark, endlessly bumping my head on unexpected nullish values and implementing dozens of home-rolled <code>undefined</code> and <code>null</code> checks, only to discover that a simple, dependable, and universal solution already existed elsewhere! </p>
+        <div class="project__btn-row">
+          <button class="project__embeded-launcher" id="monad-ex-launcher">Launch embedded code editor</button>
+          <a class="project__external-link" href="https://codesandbox.io/s/lr0rv7omvl" target="_blank">View on Codesandbox</a>
+        </div>
+        <div class="demo-img" id="monad-ex">
+          <picture>
+            <source 
+              srcset="./img/monad-big.png" 
+              type="image/png" 
+              media="(min-width: 900px)">
+            <source 
+              srcset="./img/monad-small.png" 
+              type="image/png" 
+              media="(max-width: 899px)">
+            <img src="./img/monad-big.png" alt="MDN">
+          </picture>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sticky elements with React hooks</h3>
+        <p>A demo of how to use the React hook API to implement a sticky element on a page. Sticky elements look like simple things to implement on their face, but there are a ton of things to consider: scrolling, window resizing, the dimensions of the sticky element and its anchor point, etc. The hooks API gives us a nice interface to separate out the various concerns for a component like this.</p>
+        <div class="project__btn-row">
+          <button class="project__embeded-launcher" id="polyfill-ex-launcher">Launch embedded code editor</button>
+          <a class="project__external-link" href="https://codesandbox.io/s/sticky-elements-using-react-hooks-bm8mn" target="_blank">View on Codesandbox</a>
+        </div>
+        <div class="demo-img" id="polyfill-ex">
+          <picture>
+            <source 
+              srcset="./img/polyfill-big.png" 
+              type="image/png" 
+              media="(min-width: 900px)">
+            <source 
+              srcset="./img/polyfill-small.png" 
+              type="image/png" 
+              media="(max-width: 899px)">
+            <img src="./img/polyfill-big.png" alt="MDN">
+          </picture>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Calling React components as functions</h3>
+        <p>When you spend most of your time working within a framework, it's easy to fall into the "mental trap" of the framework itself. For React, one of these mental traps is JSX syntax. It makes components easier to write and use, but it also obscures the basic Javascript functionality that actually turns your components into DOM objects.</p>
+        <p>This is a demo of how to "render" (in other words: call) a React component as a normal function instead of using JSX. I wouldn't exactly call it a best practice approach, and wouldn't do it in production, but it is a helpful reminder that, at the end of the day, everything we do in React boils down to plain old function calls. </p>
+        <div class="project__btn-row">
+          <button class="project__embeded-launcher" id="reactfunction-ex-launcher">Launch embedded code editor</button>
+          <a class="project__external-link" href="https://codesandbox.io/s/calling-react-components-as-functions-xg12i?fontsize=14&hidenavigation=1&theme=dark" target="_blank">View on Codesandbox</a>
+        </div>
+        <div class="demo-img" id="reactfunction-ex">
+          <picture>
+            <source 
+              srcset="./img/react-function-big.png" 
+              type="image/png" 
+              media="(min-width: 900px)">
+            <source 
+              srcset="./img/react-function-small.png" 
+              type="image/png" 
+              media="(max-width: 899px)">
+            <img src="./img/react-function-big.png" alt="MDN">
+          </picture>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Partial application and currying: React and vanilla JS</h3>
+        <p>The roots of React can be traced directly to some of the foundational functional programming concepts and techniques. Two of the big ones -- partial application and currying -- have all kinds of potential both inside and outside the framework, but it might be hard to see how these two techniques work outside of the React API if your first exposure to them was via React itself.</p>
+        <p>This demo shows how to do partial application and currying, both with React and without React, to help you draw parallels between them. Hopefully it will help you bridge the conceptual gap so you can start using these techniques in your vanilla JS code!</p>
+        <div class="project__btn-row">
+          <button class="project__embeded-launcher" id="partialapplication-ex-launcher">Launch embedded code editor</button>
+          <a class="project__external-link" href="https://codesandbox.io/s/partial-application-and-currying-react-and-vanilla-js-omofv?fontsize=14&hidenavigation=1&theme=dark" target="_blank">View on Codesandbox</a>
+        </div>
+        <div class="demo-img" id="partialapplication-ex">
+          <picture>
+            <source 
+              srcset="./img/partial-application-big.png" 
+              type="image/png" 
+              media="(min-width: 900px)">
+            <source 
+              srcset="./img/partial-application-small.png" 
+              type="image/png" 
+              media="(max-width: 899px)">
+            <img src="./img/partial-application-big.png" alt="MDN">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section-card">
+      <h2>Work</h2>
+
+      <div class="card">
+        <h3 class="card__title"><strong>E*TRADE Financial</strong></h3>
+        <p><u>Principal Design Technologist</u>, March 2018 to present</p> 
+        <h4>Summary:</h4>
+        <p>At E*TRADE financial, my focus is developing UI code libraries for use in frontend applications across the firm, ranging from the small and ubiquitous like buttons and cards, to the complex and specialized like custom SVG charts. It is a unique and engaging role, requiring me to think on both a big scale and a small scale: big, in that I need to consider many uses and edge cases in order to build something that many teams can successfully use; and small, in that I need to keep my components very focused so that they don't become too rigid or specialized. Exacting attention to detail, a special emphasis on testing and reliability, and fostering strong relationships with the developers using my components have made these libraries a great success!</p>
+        <h4>Live examples of work</h4>
+        <div>
+          <ul>
+            <li><a href="https://etrade.design" target="_blank">etrade.design</a>, the homepage for our design system</li>
+            <li><a href="https://react.etrade.design" target="_blank">react.etrade.design</a>, a <a href="https://storybook.js.org/" target="_blank">Storybook</a> with live versions of my components, including extensive documentation.</li>
+          </ul>
+        </div>
+
+        <h4>Specifics:</h4>
+        <ul>
+          <li>Developed and actively maintain <code>design-language-react</code>, a comprehensive library of 37 React components that makes all of ETrade's Design Language design system available in our React ecosystem, enabling rapid application development, and respresenting a considerable portion of the frontend UI for ETrade's customer facing web presence.</li>
+          <li>Developed <code>design-language-charts</code>, an internal SVG-based charting library built with D3, React, and Ramda. Notable aspects of the library's development include a nearly-stateless, prop-driven internal architecture, a heavy emphasis on declarative code and pure functions, and a bright separation of concerns between rendering and chart calculation functionality. The use of the Ramda library enables extremely expressive code and a simplification of application structure using monadic design, function composition pipelines, partial function application, and function currying.</li>
+          <li>Recruited 20 other frontend developers representing 12 development teams across the firm to make contributions to our team's various shared code libraries, either in the form of independently developed contributions or components developed during pair programming.</li>
+          <li>Actively mentored six members of the Design Language team on topics ranging from basic to advanced Javascript, basic to advanced React development, git best practices, component API design, basic and advanced functional programming techniques, and the art of homemade yogurt.</li>
+          <li>Encouraged a healthy, active developer culture by participating in code reviews for other teams, and making Slack posts on different topics that I'm learning about or sharing unique and interesting solutions to problems I've encountered in my own development work. </li>
+          <li>Advised other members of the team on transitioning our documentation site from EJS templating to React, making technical recommendations, identifying opportunities to write reusable and composable components, and implementing patches to enable the co-existence of two templating frameworks simultaneously.</li>
+          <li>Helped to organize and participated in several company-wide hackathons, facilitating a better development culture and creative approaches to solving common problems.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="card__title"><strong>Freelance Contractor</strong></h3>
+        <p><u>Full-stack Developer</u>, February 2017 to present</p>  
+        <h4>Summary:</h4>
+        <p>As a freelance web developer, I focused on revamping existing websites to create updated visual styles and improve backend functionality to improve the workflows for website administrators. One of my proudest achievments has been transitioning basixstudent.com, which used to rely on unstyled text-files uploaded to a server to serve their website content, into a responsive, fully database-driven web app, complete with a custom administrative backend for importing, updating, and exporting site data.</p>
+        <p>Specifics:</p>
+        <ul>
+          <li>Transitioned clients from text-file based application "databases" into full-fledged database-driven applications, enabling more flexible UI and a more streamlined and reliable data-management workflow for site administrators.</li>
+          <li>Work with clients to determine requirements and scope for custom web apps</li>
+          <li>Maintain and update apps when new functionality is needed</li>
+          <li>Provide full-stack development support, including frontend UI design, data migration, and custom web-based data adminin dashboards.</li>
+          <li>Host and deploy applications, including obtaining and renewing SSL certifications  </li>
+          <li>Provide site analytics via Google Analytics and AW Stats</li>
+          <li>Provide long-term support, updating dependencies to ensure apps stay up to date with supported versions</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="card__title"><strong>TD Ameritrade</strong></h3>
+        <p><u>Frontend Developer Apprentice</u>, November 2016 to February 2017</p>
+        <h4>Summary:</h4>
+        <p>During this three-month apprenticeship, I worked on TD's premier agile team to redesign their client-facing website. One of my unique responsibilities was pair programming with members of their manual QA testing team as the firm transitioned from manual to automated visual regression testing. One of my senior teammates mentioned that out of all the apprentices she'd worked with over the years, I got up to speed and contributed the most to the codebase out of anybody: a high compliment!</p>
+        <p>Specifics:</p>
+        <ul>
+          <li>Worked in an agile team to redesign TDA’s retail website. </li>
+          <li>Implemented wireframes and visual designs using Dojo and Stylus</li>
+          <li>Wrote unit tests using Mocha and Chai, and end-to-end tests using Nightwatch</li>
+          <li>Pair programmed with manual QA testers to teach them automated browser testing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blog" class="section-card">
+      <h2>Blog</h2>
+
+      <div class="card">
+        <h3 class="card__title"><strong>Medium articles</strong></h3>
+        <ul>
+          <li><a href="https://medium.com/@andyfry01/search-through-and-update-every-field-in-a-mongodb-document-c86a1094d901" target="_blank">Search Through and Update Every Field in Every Document in a MongoDB Database</a></li>
+          <li><a href="https://medium.com/@andyfry01/basix-student-ep3-database-highs-and-regular-expression-lows-a4736a3ebf0c" target="_blank">Basix Student devblog EP3: database highs and regular expression lows</a></li>
+          <li><a href="https://medium.com/@andyfry01/basix-student-devblog-day-3-setup-routing-testing-3ed1deb1acf5" target="_blank">Basix Student Devblog, EP 2: setup, routing, testing</a></li>
+          <li><a href="https://medium.com/@andyfry01/basix-student-devblog-day-one-4cc2c9b4b001" target="_blank">Basix Student Devblog, day one</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section-card">
+      <h2>About</h2>
+
+      <div class="card">
+        <p>
+          I'm a driven, outgoing, and friendly citizen of the world! Some things that I'm proud of:   
+        </p>
+        <ul>
+          <li>
+            I spent a year in Hamburg, Germany on a Fulbright Grant after finishing school, where I taught English to a wonderful assortment of smart, crazy, and hilarious students.
+          </li>
+          <li>
+            I walked across Spain on the Camino de Santiago, starting from the French border and ending in Santiago de Compostella, a distance of 500 miles.
+          </li>
+          <li>
+            I moved to NYC with no job, few connections, and managed to scratch out a living in this crazy city. First as a bartender, then as a freelance German-English translator, and now as a software developer. 
+          </li>
+          <li>
+            I rode my bike solo from my front door in Brooklyn to Nova Scotia, Canada ... and then I crashed my bike somewhere between Kentville and Wolfville on my way to Halifax, but it was a fun trip. 
+          </li>
+          <li>
+            I am married to an outrageously intelligent, compassionate, and beautiful wife!
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
